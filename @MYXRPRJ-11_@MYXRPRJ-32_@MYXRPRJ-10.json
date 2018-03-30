@@ -1,0 +1,10 @@
+{
+	"line":3,
+	"elements":[{"line":6,"name":"Automated Test Google Search 1","description":"","id":"myepic;automated-test-google-search-1","type":"scenario","keyword":"Scenario","steps":[{"result":{"duration":15991645883,"status":"passed"},"line":7,"name":"Google is Open","match":{"location":"GoogleSample.google_is_Open()"},"keyword":"Given "},{"result":{"duration":5082070722,"status":"passed"},"line":8,"name":"Search for \"Selenium\"","match":{"arguments":[{"val":"Selenium","offset":12}],"location":"GoogleSample.search_for(String)"},"keyword":"When "},{"result":{"duration":2123417739,"status":"passed"},"line":9,"name":"Validate Search Results","match":{"location":"GoogleSample.validate_Search_Results()"},"keyword":"Then "}],"tags":[{"line":5,"name":"@MYXRPRJ-11"},{"line":5,"name":"@MYXRPRJ-19"},{"line":5,"name":"@MYXRPRJ-12"},{"line":5,"name":"@MYXRPRJ-13"}]}],
+	"name":"MyEpic",
+	"description":"",
+	"id":"myepic",
+	"keyword":"Feature",
+	"uri":"1_MYXRPRJ-18.feature",
+	"tags":[{"line":1,"name":"@MYXRPRJ-32"},{"line":2,"name":"@MYXRPRJ-10"}]
+}
