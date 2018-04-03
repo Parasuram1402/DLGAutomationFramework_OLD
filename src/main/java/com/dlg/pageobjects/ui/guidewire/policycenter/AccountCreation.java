@@ -1,5 +1,7 @@
 package com.dlg.pageobjects.ui.guidewire.policycenter;
 
+import java.util.Map;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -84,24 +86,38 @@ public class AccountCreation extends BasePageClass {
 	    super(driver);
 	    this.driver=super.driver;
 	}
-	public void CreateAccount(String firstNameVal, String lastNameVal, String countryVal, String cityVal, String postCodeVal) throws InterruptedException{
-		SearchAccount(firstNameVal, lastNameVal, countryVal, cityVal, postCodeVal);
-		Create_new_account.click();	
-		click_person.click();		
+	public void CreateAccount(Map<String, String> map) throws InterruptedException{
+		try{
+			SearchAccount(map);
+			Create_new_account.click();	
+			click_person.click();		
+			
+		} catch(Exception e){
+			
+		}
 	}
 	
-	public void SearchAccount(String firstNameVal, String lastNameVal, String countryVal, String cityVal, String postCodeVal) throws InterruptedException{
-		  actions_button.click();
-		  new_Account.click();
-		  first_name.sendKeys(firstNameVal);
-		  last_name.sendKeys(lastNameVal);
-		  country.click();
-		  country.sendKeys(countryVal);
-		  country.sendKeys(Keys.ENTER);
-		  Thread.sleep(2000);
-		  city.sendKeys(cityVal);
-		  postcode.sendKeys(postCodeVal);
-		  search.click();
+	public void SearchAccount(Map<String, String> map) {
+		 // actions_button.click();
+		try{
+			Thread.sleep(5000);
+			  new_Account.click();
+
+			  first_name.sendKeys(map.get("FirstName"));
+			  last_name.sendKeys(map.get("LastName"));
+			  if(map.get("Country")!=null){
+				  country.click();
+				  country.sendKeys(map.get("Country"));
+				  country.sendKeys(Keys.ENTER);
+			  }
+			  Thread.sleep(2000);
+			  if(map.get("City")!=null)	  city.sendKeys(map.get("City"));
+			  if(map.get("Postcode")!=null) postcode.sendKeys(map.get("Postcode"));
+			  search.click();
+			
+		} catch(Exception e) {
+			
+		}
 	}
 
 }

@@ -1,5 +1,5 @@
 @DEMO-4
-Feature: 
+Feature: Account Creation
 
 	#Scenario to the search functionality of the screen
 	@DEMO-2
@@ -11,7 +11,7 @@ Feature:
 		
 		Examples:
 		    | iteration |
-		    |	1		|	
+		    |	1					|	
 
 	
 	@DEMO-3
@@ -23,4 +23,4 @@ Feature:
 		
 		Examples:
 		    | iteration |
-		    |	1		|
+		    |	1					|

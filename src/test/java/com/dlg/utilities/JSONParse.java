@@ -16,7 +16,7 @@ public class JSONParse {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		JSONParser parser = new JSONParser();
-		String report_json = FileUtils.readFileToString(new File("report.json"));	
+		String report_json = FileUtils.readFileToString(new File("./Reports/03-04-2018/20-48-14/JSON/executionReport.json"));	
 	      try{
 	          Object obj = parser.parse(report_json);
 	          JSONArray array = (JSONArray)obj;

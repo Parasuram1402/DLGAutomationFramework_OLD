@@ -9,6 +9,8 @@ import java.util.Map;
 import org.junit.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import com.dlg.common.libraries.EnvironmentVariablesHandler;
 import com.dlg.common.libraries.ReportingUtilities;
 
@@ -26,23 +28,22 @@ public class InitializationClass {
     public ReportingUtilities Rep;
     public RuntimeOptions rto;
    
-    @Before
-    public void initializeObjects() throws Exception {
-    	System.setProperty("webdriver.chrome.driver", "./Resources/BrowserDrivers/chromedriver.exe");
-    	driver = new ChromeDriver();
+
+    public InitializationClass() throws Exception {
     	if (!executionFlag) {
+    		
         	Rep=new ReportingUtilities(); 
         	env=new EnvironmentVariablesHandler();
-//        	features="features",glue={"com.dlg.stepdefinitions.acceptancetests"}, plugin={"pretty","json:report.json"}
- /*       	final 
-        	RuntimeOptions runtimeOptions = new RuntimeOptions(Arrays.asList(
-                    "--plugin", "pretty","json:D:\\report.json"
-                    )) ;        */
-        	
-        	//System.out.println(rto.getGlue().toString());
         	executionFlag = true;
-        }    
-    	
+        }
+    	String browserType=env.getEnvironmentVariables().get("BROWSER");
+    	if(browserType.equalsIgnoreCase("chrome")){
+    		System.setProperty("webdriver.chrome.driver", "./Resources/BrowserDrivers/chromedriver.exe");
+    		driver = new ChromeDriver();
+    	} else if(browserType.equalsIgnoreCase("firefox")){
+    		System.setProperty("webdriver.firefox.marionette",  "./Resources/BrowserDrivers/geckodriver.exe");
+    		driver = new FirefoxDriver();   		
+    	}
     }
 
     public WebDriver getDriver() {

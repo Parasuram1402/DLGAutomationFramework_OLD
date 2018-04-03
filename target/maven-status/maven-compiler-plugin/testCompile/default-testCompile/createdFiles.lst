@@ -1,0 +1,17 @@
+com\dlg\runner\XPostExecution.class
+com\dlg\utilities\PostResults$2.class
+com\dlg\utilities\NetClientGet$1.class
+com\dlg\runner\RunnerClass.class
+com\dlg\utilities\NetClientGet$2.class
+com\dlg\stepdefinitions\acceptancetests\InitializationClass.class
+com\dlg\utilities\SoapCall.class
+com\dlg\common\libraries\DataHandler.class
+com\dlg\stepdefinitions\acceptancetests\GoogleSample.class
+com\dlg\common\libraries\MySample.class
+com\dlg\stepdefinitions\acceptancetests\POD1_StepDefinitions.class
+com\dlg\common\libraries\EnvironmentVariablesHandler.class
+com\dlg\utilities\NetClientGet.class
+com\dlg\common\libraries\ReportingUtilities.class
+com\dlg\utilities\JSONParse.class
+com\dlg\utilities\PostResults$1.class
+com\dlg\utilities\PostResults.class

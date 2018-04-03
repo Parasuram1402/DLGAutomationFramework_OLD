@@ -22,7 +22,6 @@ public class GoogleSample {
 	Scenario scenario;
 	File ReportFolder;
 	Map<String,String> envVars;
-	CucumberOptions CO;
 	public GoogleSample(InitializationClass init) {
 		this.init=init;
 	}

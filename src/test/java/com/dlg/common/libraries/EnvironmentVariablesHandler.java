@@ -24,6 +24,7 @@ public class EnvironmentVariablesHandler {
 			for(int i=0;i<confArray.length;i++){
 				String[] dataArr=confArray[i].split("=");
 				dataArr[1]=dataArr[1].replace("\"", "");
+				dataArr[1]=dataArr[1].replace("\r", "");
 				envVariablesMap.put(dataArr[0],dataArr[1]);
 			}
 		} catch(FileNotFoundException fnfe){
