@@ -1,4 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.dlg.runner.RunnerClass
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 114.691 s - in com.dlg.runner.RunnerClass
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.41 s <<< FAILURE! - in com.dlg.runner.RunnerClass
+initializationError(com.dlg.runner.RunnerClass)  Time elapsed: 0 s  <<< ERROR!
+java.lang.NoSuchMethodError: cucumber.runtime.RuntimeOptions.formatter(Ljava/lang/ClassLoader;)Lcucumber/api/formatter/Formatter;
+

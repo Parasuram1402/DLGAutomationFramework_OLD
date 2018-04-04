@@ -13,6 +13,7 @@ import org.apache.commons.io.FileUtils;
 
 public class JSONParse {
 	
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		JSONParser parser = new JSONParser();
