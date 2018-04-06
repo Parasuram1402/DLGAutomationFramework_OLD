@@ -62,7 +62,8 @@ public class PostResults {
 				URL url = new URL("http://localhost:6060/rest/raven/1.0/import/execution/cucumber");
 				HttpURLConnection conn= (HttpURLConnection) url.openConnection();
 				//String report_json="";
-				   String report_json = FileUtils.readFileToString(new File("F:\\Selenium_Workspace\\Cucumber\\report.json"));
+				   @SuppressWarnings("deprecation")
+				String report_json = FileUtils.readFileToString(new File("F:\\Selenium_Workspace\\Cucumber\\report.json"));
 				   System.out.println(report_json);
 				
 				

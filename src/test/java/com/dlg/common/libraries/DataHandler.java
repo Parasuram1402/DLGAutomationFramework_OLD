@@ -1,4 +1,5 @@
 package com.dlg.common.libraries;
+
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
@@ -17,8 +18,11 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+
 public class DataHandler {
 	private static final String FILE_NAME = "./Resources/TestData/B4C_TestData.xlsx";
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public List<Map<String , String>> getData(String sheetName, String sprint, List<String> tags, int scnIter) {
 		Workbook workbook;
 		Cell currentCell, sprintCell, featureCell, testExecutionIdCell, scenarioIdCell, iterationCell;
