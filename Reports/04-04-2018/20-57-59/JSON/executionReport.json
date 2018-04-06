@@ -1,0 +1,234 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 5767427705,
+              "status": "passed"
+            },
+            "match": {
+              "location": "POD1_StepDefinitions.SetUp(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 359834,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GoogleSample.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Scenario to test search",
+        "description": "",
+        "id": "account-creation;scenario-to-test-search;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 788885990,
+              "status": "passed"
+            },
+            "match": {
+              "location": "InitializationClass.cleanUp()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11995566071,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User Logged into PolicyCenter",
+            "match": {
+              "location": "POD1_StepDefinitions.user_Logged_into_PolicyCenter()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4407317361,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Browse to Create Account Screen",
+            "match": {
+              "location": "POD1_StepDefinitions.browse_to_Create_Account_Screen()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6608893308,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Entered Require Details for Search 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 35
+                }
+              ],
+              "location": "POD1_StepDefinitions.entered_Require_Details_for_Search(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31717,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Details of Account should be displayed",
+            "match": {
+              "location": "POD1_StepDefinitions.details_of_Account_should_be_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 5,
+            "name": "@DEMO-2"
+          },
+          {
+            "line": 1,
+            "name": "@DEMO-4"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3924341528,
+              "status": "passed"
+            },
+            "match": {
+              "location": "POD1_StepDefinitions.SetUp(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 148011,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GoogleSample.SetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "Scenario to create account",
+        "description": "",
+        "id": "account-creation;scenario-to-create-account;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 698721247,
+              "status": "passed"
+            },
+            "match": {
+              "location": "InitializationClass.cleanUp()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11982258997,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User Logged into PolicyCenter",
+            "match": {
+              "location": "POD1_StepDefinitions.user_Logged_into_PolicyCenter()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4393290996,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Browse to Create Account Screen",
+            "match": {
+              "location": "POD1_StepDefinitions.browse_to_Create_Account_Screen()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5657190400,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Entered Require Details for Create Account 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 43
+                }
+              ],
+              "location": "POD1_StepDefinitions.entered_Require_Details_for_Create_Account(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 353867427,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Account is Created Successfully",
+            "match": {
+              "location": "POD1_StepDefinitions.account_is_Created_Successfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 17,
+            "name": "@DEMO-3"
+          },
+          {
+            "line": 1,
+            "name": "@DEMO-4"
+          }
+        ]
+      }
+    ],
+    "name": "Account Creation",
+    "description": "",
+    "id": "account-creation",
+    "keyword": "Feature",
+    "uri": "AccountCreation.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@DEMO-4"
+      }
+    ]
+  }
+]

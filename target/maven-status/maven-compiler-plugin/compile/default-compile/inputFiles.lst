@@ -1,7 +1,10 @@
-C:\Work_Data\Selenium\DLGAutomationFramework\src\main\java\com\dlg\pageobjects\api\guidewire\billingcenter\globalweather\GlobalWeatherStub.java
-C:\Work_Data\Selenium\DLGAutomationFramework\src\main\java\com\dlg\pageobjects\api\guidewire\billingcenter\globalweather\GlobalWeatherCallbackHandler.java
+C:\Work_Data\Selenium\DLGAutomationFramework\src\main\java\com\dlg\pageobjects\api\guidewire\billingcenter\BillingSummaryAPI\RequiredFieldExceptionException.java
 C:\Work_Data\Selenium\DLGAutomationFramework\src\main\java\com\dlg\pageobjects\ui\BasePageClass.java
 C:\Work_Data\Selenium\DLGAutomationFramework\src\main\java\com\dlg\pageobjects\ui\guidewire\common\SearchPage.java
 C:\Work_Data\Selenium\DLGAutomationFramework\src\main\java\com\dlg\pageobjects\ui\guidewire\policycenter\AccountCreationTemp.java
+C:\Work_Data\Selenium\DLGAutomationFramework\src\main\java\com\dlg\pageobjects\api\guidewire\billingcenter\BillingSummaryAPI\BadIdentifierExceptionException.java
+C:\Work_Data\Selenium\DLGAutomationFramework\src\main\java\com\dlg\pageobjects\api\guidewire\billingcenter\BillingSummaryAPI\BillingSummaryAPIStub.java
 C:\Work_Data\Selenium\DLGAutomationFramework\src\main\java\com\dlg\pageobjects\ui\guidewire\policycenter\AccountCreation.java
+C:\Work_Data\Selenium\DLGAutomationFramework\src\main\java\com\dlg\pageobjects\api\guidewire\billingcenter\BillingSummaryAPI\SOAPExceptionException.java
+C:\Work_Data\Selenium\DLGAutomationFramework\src\main\java\com\dlg\pageobjects\api\guidewire\billingcenter\BillingSummaryAPI\WsiAuthenticationExceptionException.java
 C:\Work_Data\Selenium\DLGAutomationFramework\src\main\java\com\dlg\pageobjects\ui\guidewire\common\GWLogin.java

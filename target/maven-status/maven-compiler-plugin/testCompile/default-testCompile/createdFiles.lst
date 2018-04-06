@@ -7,6 +7,7 @@ com\dlg\stepdefinitions\acceptancetests\InitializationClass.class
 com\dlg\utilities\SoapCall.class
 com\dlg\common\libraries\DataHandler.class
 com\dlg\stepdefinitions\acceptancetests\GoogleSample.class
+com\dlg\stepdefinitions\acceptancetests\POD1_APITests.class
 com\dlg\common\libraries\MySample.class
 com\dlg\stepdefinitions\acceptancetests\POD1_StepDefinitions.class
 com\dlg\common\libraries\EnvironmentVariablesHandler.class

@@ -17,7 +17,7 @@ WebElement password;
 @FindBy(linkText ="Log In")
 WebElement logIn;
 
-@FindBy(xpath="//span[@id=':TabLinkMenuButton-btnIconEl']")
+@FindBy(id="TabLinkMenuButton-btnIconEl")
 WebElement menuButton;
 
 @FindBy(xpath="//a[@id='TabBar:LogoutTabBarLink-itemEl']/span")

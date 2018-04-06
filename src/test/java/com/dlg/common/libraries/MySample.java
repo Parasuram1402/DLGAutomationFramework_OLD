@@ -1,31 +1,16 @@
 package com.dlg.common.libraries;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.io.IOException;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
+import org.apache.pdfbox.text.PDFTextStripperByArea;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import java.io.File;
+import java.io.IOException;
 
 public class MySample {
 
-	public static void main(String[] args) {
-		File envFile = new File("./Resources/Temp/tempdata.txt");
-		FileInputStream envFileIS;
-		try {
-    		System.setProperty("webdriver.firefox.marionette",  "./Resources/BrowserDrivers/geckodriver.exe");
-    		WebDriver driver = new FirefoxDriver(); 
-    		driver.get("http://www.googole.co.in");
-    		
-    		Thread.sleep(5000);
-    		driver.quit();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
+    public void printPDF() throws IOException {
+    	System.out.println("Hello");
+    }
 }
