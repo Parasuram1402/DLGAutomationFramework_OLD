@@ -42,7 +42,7 @@ public class GoogleSample {
 		
 		driver.get(envVars.get("CC_URL"));
 		if(envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("ALL") || envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("pass")){
-			ReportingUtilities.takeScreenShot(ReportFolder.getAbsolutePath()+"/Screenshots/", driver, scenario.getId(),"google_is_Open");
+			ReportingUtilities.takeScreenShot(ReportFolder.getAbsolutePath()+"/Screenshots/", driver, scenario,"google_is_Open");		
 		}
 		Thread.sleep(3000);			
 	}

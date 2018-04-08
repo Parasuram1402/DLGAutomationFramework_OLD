@@ -12,6 +12,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import cucumber.api.Scenario;
+
 public class ReportingUtilities {
 	private static File ReportFolder;
 	public ReportingUtilities(){
@@ -36,9 +38,10 @@ public class ReportingUtilities {
 			
 		}		
 	}
-	public static void takeScreenShot(String path, WebDriver driver,String scnid, String step ) throws IOException{
+	public static void takeScreenShot(String path, WebDriver driver,Scenario scn, String step ) throws IOException{
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scrFile, new File(path+"/"+ scnid.replace(";", "_")+"_"+step+"_"+new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new Date())+".png"));
+		FileUtils.copyFile(scrFile, new File(path+"/"+ scn.getId().replace(";", "_")+"_"+step+"_"+new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new Date())+".png"));
+		scn.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES), "image/png");
 	}
 	
 	public static File getReportFolder(){

@@ -6,7 +6,7 @@ import cucumber.api.junit.Cucumber;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="features/Google.feature",glue={"com.dlg.stepdefinitions.acceptancetests"}, plugin={"pretty","json:report.json"}) 
+@CucumberOptions(features="features/Google.feature",glue={"com.dlg.stepdefinitions.acceptancetests"}, plugin={"pretty","json:report.json","html:HTML_Reports" }) 
 public class RunnerClass {
 
 }

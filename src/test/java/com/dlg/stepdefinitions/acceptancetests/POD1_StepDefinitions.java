@@ -57,7 +57,7 @@ public class POD1_StepDefinitions {
 			Thread.sleep(10000);
 			login.logIn(envVars.get("PC_UID"), envVars.get("PC_PWD"));
 			if(envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("ALL") || envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("pass")){
-				ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario.getId(),"user_Logged_into_PolicyCenter");
+				ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario,"user_Logged_into_PolicyCenter");
 			}
 		} catch(Exception e){
 			
@@ -72,7 +72,7 @@ public class POD1_StepDefinitions {
 			accCrea.actions_button.click();
 			Thread.sleep(3000);
 			if(envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("ALL") || envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("pass")){
-				ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario.getId(),"browse_to_Create_Account_Screen");
+				ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario,"browse_to_Create_Account_Screen");
 			}
 		} catch(Exception e){
 			
@@ -89,7 +89,7 @@ public class POD1_StepDefinitions {
 				accCrea.SearchAccount(map);	
 			}
 			if(envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("ALL") || envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("pass")){
-				ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario.getId(),"entered_Require_Details_for_Search");
+				ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario,"entered_Require_Details_for_Search");
 			} 	    			
 		} catch(Exception e){
 			
@@ -105,7 +105,7 @@ public class POD1_StepDefinitions {
 				accCrea.CreateAccount(map);	
 			}
 			if(envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("ALL") || envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("pass")){
-				ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario.getId(),"entered_Require_Details_for_Search");
+				ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario,"entered_Require_Details_for_Search");
 			}				
 		} catch(Exception e){
 			
@@ -117,7 +117,7 @@ public class POD1_StepDefinitions {
 	public void account_is_Created_Successfully() throws Throwable {
 	    
 		if(envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("ALL") || envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("pass")){
-			ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario.getId(),"account_is_Created_Successfully");
+			ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario,"account_is_Created_Successfully");
 		}		
 		//login.logOut();
 	}
@@ -129,7 +129,7 @@ public class POD1_StepDefinitions {
 	    		//List<WebElement> rows=accCrea.searchResults.findElements(By.xpath("tr"));
 	    		//System.out.println(rows.size());
 	    		if(envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("ALL") || envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("pass")){
-	    			ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario.getId(),"details_of_Account_should_be_displayed");
+	    			ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario,"details_of_Account_should_be_displayed");
 	    		}	    		
 	    	}*/
 	    } catch(Exception e){
