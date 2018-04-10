@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.dlg.runner.XPostExecution
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.006 s <<< FAILURE! - in com.dlg.runner.XPostExecution
-test(com.dlg.runner.XPostExecution)  Time elapsed: 0.006 s  <<< ERROR!
-java.nio.file.AccessDeniedException: HTML_Reports -> .\Reports\06-04-2018\18-15-50\HTML
-	at com.dlg.runner.XPostExecution.test(XPostExecution.java:29)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.dlg.runner.XPostExecution

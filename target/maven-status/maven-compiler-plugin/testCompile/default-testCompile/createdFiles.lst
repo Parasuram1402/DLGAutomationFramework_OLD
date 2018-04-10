@@ -14,5 +14,6 @@ com\dlg\common\libraries\EnvironmentVariablesHandler.class
 com\dlg\utilities\NetClientGet.class
 com\dlg\common\libraries\ReportingUtilities.class
 com\dlg\utilities\JSONParse.class
+com\dlg\stepdefinitions\acceptancetests\sampleClass.class
 com\dlg\utilities\PostResults$1.class
 com\dlg\utilities\PostResults.class

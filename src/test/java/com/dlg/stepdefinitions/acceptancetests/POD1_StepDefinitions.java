@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -68,9 +69,11 @@ public class POD1_StepDefinitions {
 	@Given("^Browse to Create Account Screen$")
 	public void browse_to_Create_Account_Screen() throws Throwable {
 		try{
-			Thread.sleep(1000);
+			Thread.sleep(5000);
 			accCrea.actions_button.click();
-			Thread.sleep(3000);
+			Thread.sleep(2000);
+			accCrea.new_Account.click();
+			Thread.sleep(5000);
 			if(envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("ALL") || envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("pass")){
 				ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario,"browse_to_Create_Account_Screen");
 			}
@@ -113,29 +116,34 @@ public class POD1_StepDefinitions {
 	    
 	}
 
-	@Then("^Account is Created Successfully$")
-	public void account_is_Created_Successfully() throws Throwable {
-	    
+	@Then("^Account is Created Successfully (\\d+)$")
+	public void account_is_Created_Successfully(int arg1) throws Throwable {
+		List<String> tags = (List<String>) scenario.getSourceTagNames();
+		//Assert.assertTrue(accCrea.accountDetails.isDisplayed());
 		if(envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("ALL") || envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("pass")){
 			ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario,"account_is_Created_Successfully");
-		}		
-		//login.logOut();
+		}
+		Thread.sleep(5000);
+		dh.saveData("GW_PC_AccountCreation", "Sprint1", tags, arg1, "Account_ID", accCrea.accountID.getText());
+		
+		
+		login.logOut();
 	}
 
 	@Then("^Details of Account should be displayed$")
 	public void details_of_Account_should_be_displayed() throws Throwable {
 	    try{
-	    	/*if (accCrea.searchResults.isEnabled()){
-	    		//List<WebElement> rows=accCrea.searchResults.findElements(By.xpath("tr"));
-	    		//System.out.println(rows.size());
+	    	Assert.assertTrue(accCrea.searchResults.isDisplayed());
+	    	if (accCrea.searchResults.isDisplayed()){
+
 	    		if(envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("ALL") || envVars.get("SCREENSHOT_LEVEL").equalsIgnoreCase("pass")){
 	    			ReportingUtilities.takeScreenShot(screenshotPath, driver, scenario,"details_of_Account_should_be_displayed");
 	    		}	    		
-	    	}*/
+	    	}
 	    } catch(Exception e){
 	    	
 	    }
-		//login.logOut(); 
+		login.logOut(); 
 			
 	}
 

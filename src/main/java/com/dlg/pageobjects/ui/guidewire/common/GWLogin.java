@@ -1,5 +1,6 @@
 package com.dlg.pageobjects.ui.guidewire.common;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,22 +9,23 @@ import com.dlg.pageobjects.ui.BasePageClass;
 public class GWLogin extends BasePageClass {
 WebDriver driver;
 
+
 @FindBy(xpath="//input[@id='Login:LoginScreen:LoginDV:username-inputEl']")
-WebElement userName;
+public WebElement userName;
 
 @FindBy(xpath="//input[@id='Login:LoginScreen:LoginDV:password-inputEl']")
-WebElement password;
+public WebElement password;
 
 @FindBy(linkText ="Log In")
-WebElement logIn;
+public WebElement logIn;
 
-@FindBy(id="TabLinkMenuButton-btnIconEl")
+@FindBy(xpath="//*[@id=':TabLinkMenuButton-btnIconEl']")
 WebElement menuButton;
 
-@FindBy(xpath="//a[@id='TabBar:LogoutTabBarLink-itemEl']/span")
+@FindBy(xpath="//*[@id='TabBar:LogoutTabBarLink-itemEl']")
 WebElement logOut;
 
-@FindBy(xpath="//span[@id='button-1005-btnInnerEl']")
+@FindBy(xpath="//*[@id='button-1005-btnInnerEl']")
 WebElement logOutOk;
 
 	public GWLogin(WebDriver driver){
@@ -38,10 +40,19 @@ WebElement logOutOk;
 		logIn.click();
 	}
 	
-	public void logOut(){
+	public void logOut() throws InterruptedException{
 		menuButton.click();
+		Thread.sleep(2000);
 		logOut.click();
-		logOutOk.click();
+		Thread.sleep(5000);
+		
+		try{
+    		if(logOutOk.isDisplayed())
+    			logOutOk.click();    			
+		} catch(Exception e){
+			
+		}
+	
 	}
 
 }
